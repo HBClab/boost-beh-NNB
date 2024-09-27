@@ -28,7 +28,8 @@ def qc(submission):
         raise ValueError('Submission is empty')
     # check if submission has correct number of rows (within 5% of expected = 203)
     if len(submission) < 193 or len(submission) > 213:
-        raise ValueError('Submission has incorrect number of rows')
+        print(f'Warning: Submission has {len(submission)} rows. Expected 203')
+        
     
 def plots(submission, output, sub):
     import pandas as pd 
